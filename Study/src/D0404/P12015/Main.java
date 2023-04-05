@@ -1,51 +1,52 @@
 package D0404.P12015;
 
+import java.io.*;
 import java.util.*;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
 
 		int[] arr = new int[N];
 		int[] dp = new int[N];
-		
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++) {
-			arr[i] = sc.nextInt();
+			arr[i] = Integer.parseInt(st.nextToken());
 		}
 
 		int len = 0;
-		for (int i = 1; i < N; i++) {
-			boolean flag = false;
-			
-			// Å« ¼ö ÀÏ °æ¿ì ¸¶Áö¸·¿¡ ºÙÀÓ
-			if (len == 0 || arr[i] > dp[len-1]) {
+		for (int i = 0; i < N; i++) {
+			if (len == 0 || arr[i] > dp[len - 1]) {
 				dp[len++] = arr[i];
 				continue;
 			}
 
-			// ÀÛÀº ¼öÀÏ ½Ã ÀÌÁø Å½»ö
-			int low = 0, mid = 0, high = len-1;
+			int low = 0, mid = 0, high = len - 1;
+			// ì¼ì¹˜í•˜ëŠ” ê²ƒì„ ì°¾ì„ ë•Œ
+			int flag = mid;
 			while (low <= high) {
 				mid = (low + high) / 2;
 
-				if (dp[mid] == arr[i]) {
-					flag = true;
-					break;
-				}
-
+				// í´ ê²½ìš°
 				if (dp[mid] < arr[i]) {
 					low = mid + 1;
-				} else {
+				}
+				// ì‘ì€ ê²½ìš°
+				else if (dp[mid] > arr[i]) {
 					high = mid - 1;
+					flag = mid;
+				}
+				// ë™ì¼í•œ ê²½ìš°
+				else {
+					flag = mid;
+					break;
 				}
 			}
-			if (!flag) {
-				dp[mid] = arr[i];
-			}
-			System.out.println(Arrays.toString(dp));
+			dp[flag] = arr[i];
 		}
-		
+		System.out.println(len);
 	}
 }
