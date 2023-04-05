@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 // Floyd Warshall
-public class Solution_5643_키순서_조태규 {
+public class Solution_5643{
 
 	static int N;
 	static boolean hiOrder[][];

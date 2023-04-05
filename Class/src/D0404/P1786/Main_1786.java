@@ -2,7 +2,7 @@ package D0404.P1786;
 
 import java.io.*;
 
-public class Main_1786_Ã£±â_Á¶ÅÂ±Ô {
+public class Main_1786 {
 	static StringBuilder sb;
 	static int pi[], cnt;
 
@@ -24,7 +24,7 @@ public class Main_1786_Ã£±â_Á¶ÅÂ±Ô {
 		int j = 0;
 		for (int i = 0; i < N; i++) {
 
-			// 0ÀÌ µÇ°Å³ª ÀÏÄ¡ÇÒ¶§±îÁö ¹İº¹
+			// 0ï¿½ï¿½ ï¿½Ç°Å³ï¿½ ï¿½ï¿½Ä¡ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½İºï¿½
 			while (j != 0 && t[i] != p[j]) {
 				if (j != 0)
 					j = pi[j - 1];
@@ -33,7 +33,7 @@ public class Main_1786_Ã£±â_Á¶ÅÂ±Ô {
 				j++;
 			}
 
-			// T¿Í P°¡ ºÎºĞ ÀÏÄ¡ ÇÏ´Â °æ¿ì
+			// Tï¿½ï¿½ Pï¿½ï¿½ ï¿½Îºï¿½ ï¿½ï¿½Ä¡ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½
 			if (j == p.length) {
 				j = pi[j - 1];
 				cnt++;
@@ -44,14 +44,14 @@ public class Main_1786_Ã£±â_Á¶ÅÂ±Ô {
 
 	private static void getNum(char[] s) {
 		int N = s.length;
-		// Á¢µÎ, Á¢¹Ì µ¿ÀÏÇÑ ¼öÀÇ ¹è¿­
+		// ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
 		pi = new int[N];
 		pi[0] = 0;
 
 		int j = 0;
 		for (int i = 1; i < N; i++) {
 
-			// 0ÀÌ µÇ°Å³ª ÀÏÄ¡ÇÒ¶§±îÁö ¹İº¹
+			// 0ï¿½ï¿½ ï¿½Ç°Å³ï¿½ ï¿½ï¿½Ä¡ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½İºï¿½
 			while (j != 0 && s[i] != s[j]) {
 				if (j != 0)
 					j = pi[j - 1];

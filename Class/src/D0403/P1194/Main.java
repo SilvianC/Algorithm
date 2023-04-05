@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Main_1194_´ŞÀÌÂ÷¿À¸¥´Ù°¡ÀÚ_Á¶ÅÂ±Ô {
+public class Main {
 
 	static int[] dr = { -1, 0, 1, 0 };
 	static int[] dc = { 0, 1, 0, -1 };
@@ -64,7 +64,7 @@ public class Main_1194_´ŞÀÌÂ÷¿À¸¥´Ù°¡ÀÚ_Á¶ÅÂ±Ô {
 		while (!queue.isEmpty()) {
 			moon Cur = queue.poll();
 
-			// µµÂø
+			// ï¿½ï¿½ï¿½ï¿½
 			if (map[Cur.r][Cur.c] == '1') {
 				answer = Cur.count;
 				break;
@@ -85,10 +85,10 @@ public class Main_1194_´ŞÀÌÂ÷¿À¸¥´Ù°¡ÀÚ_Á¶ÅÂ±Ô {
 					visited[nr][nc][flag | 1 << map[nr][nc] - 'a'] = true;
 					queue.add(new moon(nr, nc, flag | 1 << map[nr][nc] - 'a', count + 1));
 				}
-				// ´ë¹®
+				// ï¿½ë¹®
 				else if (map[nr][nc] >= 'A' && map[nr][nc] <= 'F') {
 
-					// Å° º¸À¯
+					// Å° ï¿½ï¿½ï¿½ï¿½
 					if ((flag & (1 << map[nr][nc] - 'A')) != 0) {
 
 						visited[nr][nc][flag] = true;

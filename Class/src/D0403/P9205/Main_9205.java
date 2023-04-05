@@ -2,7 +2,7 @@ package D0403.P9205;
 
 import java.util.*;
 
-public class Main_9205_¸ÆÁÖ¸¶½Ã¸é¼­°É¾î°¡±â_Á¶ÅÂ±Ô {
+public class Main_9205 {
 	static int pos[][], D[][];
 	static final int INF = Integer.MAX_VALUE;
 
@@ -27,13 +27,13 @@ public class Main_9205_¸ÆÁÖ¸¶½Ã¸é¼­°É¾î°¡±â_Á¶ÅÂ±Ô {
 					D[j][i] = D[i][j] = dis>1000?INF:dis;
 				}
 			}
-			// °æÀ¯Áö
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int k = 0; k < N+2; k++) {
-				// Ãâ¹ßÁö
+				// ï¿½ï¿½ï¿½ï¿½ï¿½
 				for (int i = 0; i < N + 2; i++) {
 					if (i == k)
 						continue;
-					// µµÂøÁö
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					for (int j = 0; j < N + 2; j++) {
 						if (D[i][k] == INF || D[k][j] == INF || j == k || j == i)
 							continue;

@@ -3,7 +3,7 @@ package D0405.SWEA5643;
 import java.io.*;
 import java.util.*;
 
-public class Å°¼ø¼­3_ÇÃ·ÎÀÌµå {
+public class í‚¤ìˆœì„œ3_í”Œë¡œì´ë“œ {
 
 	static int N, M, cnt, ans;
 	static int adj[][];
@@ -16,7 +16,7 @@ public class Å°¼ø¼­3_ÇÃ·ÎÀÌµå {
 			N = Integer.parseInt(br.readLine());
 			M = Integer.parseInt(br.readLine());
 
-			adj = new int[N + 1][N + 1]; // ÀÚ½Åº¸´Ù Å« °ü°è Ç¥Çö
+			adj = new int[N + 1][N + 1]; // ï¿½Ú½Åºï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
 
 			StringTokenizer st = null;
 			int smallP, tallP;
@@ -25,17 +25,17 @@ public class Å°¼ø¼­3_ÇÃ·ÎÀÌµå {
 				smallP = Integer.parseInt(st.nextToken());
 				tallP = Integer.parseInt(st.nextToken());
 
-				adj[smallP][tallP] = 1; // À¯Çâ ±×·¡ÇÁ
+				adj[smallP][tallP] = 1; // ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½
 			}
-			// °æÀ¯ ÇĞ»ı
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½Ğ»ï¿½
 			for (int k = 1; k <= N; k++) {
-				// Ãâ¹ß ÇĞ»ı
+				// ï¿½ï¿½ï¿½ ï¿½Ğ»ï¿½
 				for (int i = 1; i <= N; i++) {
 					if (i == k || adj[i][k] == 0)
 						continue;
-					// µµÂø ÇĞ»ı
+					// ï¿½ï¿½ï¿½ï¿½ ï¿½Ğ»ï¿½
 					for (int j = 1; j <= N; j++) {
-						// ÀÌ¹Ì Å° ¼ø¼­¸¦ ¾Ë°í ÀÖÀ¸¸é pass
+						// ï¿½Ì¹ï¿½ Å° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ pass
 						if (adj[i][j] == 1)
 							continue;
 						adj[i][j] = adj[i][k] & adj[k][j];

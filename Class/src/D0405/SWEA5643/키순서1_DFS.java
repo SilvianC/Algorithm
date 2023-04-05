@@ -3,7 +3,7 @@ package D0405.SWEA5643;
 import java.io.*;
 import java.util.*;
 
-public class Å°¼ø¼­1_DFS {
+public class í‚¤ìˆœì„œ1_DFS {
 
 	static int N, M, cnt, ans;
 	static int adj[][];
@@ -16,7 +16,7 @@ public class Å°¼ø¼­1_DFS {
 			N = Integer.parseInt(br.readLine());
 			M = Integer.parseInt(br.readLine());
 
-			adj = new int[N + 1][N + 1]; // ÀÚ½Åº¸´Ù Å« °ü°è Ç¥Çö
+			adj = new int[N + 1][N + 1]; // ï¿½Ú½Åºï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
 
 			StringTokenizer st = null;
 			int smallP, tallP;
@@ -25,7 +25,7 @@ public class Å°¼ø¼­1_DFS {
 				smallP = Integer.parseInt(st.nextToken());
 				tallP = Integer.parseInt(st.nextToken());
 
-				adj[smallP][tallP] = 1; // À¯Çâ ±×·¡ÇÁ
+				adj[smallP][tallP] = 1; // ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½
 			}
 
 			for (int i = 1; i <= N; i++) {
@@ -41,7 +41,7 @@ public class Å°¼ø¼­1_DFS {
 	}
 
 	private static void gtDFS(int cur, boolean[] visited) {
-		// cur Á¤Á¡ ±âÁØÀ¸·Î ÀÚ½Åº¸´Ù Å« Á¤Á¡ Å½»ö
+		// cur ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½Åºï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
 		visited[cur] = true;
 		for (int i = 1; i <= N; i++) {
 			if (adj[cur][i] == 1 && !visited[i]) {
@@ -52,7 +52,7 @@ public class Å°¼ø¼­1_DFS {
 	}
 
 	private static void ltDFS(int cur, boolean[] visited) {
-		// cur Á¤Á¡ ±âÁØÀ¸·Î ÀÚ½Åº¸´Ù Å« Á¤Á¡ Å½»ö
+		// cur ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú½Åºï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
 		visited[cur] = true;
 		for (int i = 1; i <= N; i++) {
 			if (adj[i][cur] == 1 && !visited[i]) {

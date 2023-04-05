@@ -3,7 +3,7 @@ package D0405.SWEA4014;
 import java.io.*;
 import java.util.*;
 
-public class Solution_4014_È°ÁÖ·Î°Ç¼³_Á¶ÅÂ±Ô {
+public class Solution_4014 {
 	static int N, X, ans, map[][];
 
 	public static void main(String[] args) throws Exception {
@@ -20,7 +20,7 @@ public class Solution_4014_È°ÁÖ·Î°Ç¼³_Á¶ÅÂ±Ô {
 
 			map = new int[N][N];
 
-			// ÁöÇü ³ôÀÌ ÀÔ·Â
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 			for (int i = 0; i < N; i++) {
 				st = new StringTokenizer(br.readLine());
 				for (int j = 0; j < N; j++) {
@@ -35,20 +35,20 @@ public class Solution_4014_È°ÁÖ·Î°Ç¼³_Á¶ÅÂ±Ô {
 	}
 
 	private static void getCnt() {
-		// Çà ºÐ¼®
+		// ï¿½ï¿½ ï¿½Ð¼ï¿½
 		for (int i = 0; i < N; i++) {
 			int height = 0, sameCnt = 0;
 			for (int j = 0; j < N; j++) {
-				// ³ôÀÌ ´Ù¸¥ °æ¿ì
+				// ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½
 				if (height != map[i][j]) {
 
 					height = map[i][j];
-					// 1¸¸ Â÷ÀÌ ³¯¶§
+					// 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 					if (map[i][j] - height == 1 && sameCnt > X) {
 						ans++;
 					}
 				}
-				// ³ôÀÌ °°Àº °æ¿ì
+				// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 				else {
 					sameCnt++;
 				}

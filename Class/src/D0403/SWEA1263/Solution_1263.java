@@ -3,7 +3,7 @@ package D0403.SWEA1263;
 import java.io.*;
 import java.util.*;
 
-public class Solution_1263_사람네트워크2_조태규 {
+public class Solution_1263{
 	static int N, D[][];
 	final static int INF = 10000000;
 

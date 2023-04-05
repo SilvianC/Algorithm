@@ -3,7 +3,7 @@ package D0405.P3055;
 import java.io.*;
 import java.util.*;
 
-public class Main_3055_Å»Ãâ_Á¶ÅÂ±Ô {
+public class Main_3055{
 	static int R, C;
 	static char[][] map;
 	static boolean[][] visited;
@@ -54,7 +54,7 @@ public class Main_3055_Å»Ãâ_Á¶ÅÂ±Ô {
 		while (!hedgeQ.isEmpty()) {
 			int[] hedge = hedgeQ.poll();
 
-			// ºñ¹öÀÇ ±¼¿¡ µµÂøÇÑ °æ¿ì
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 			if (map[hedge[0]][hedge[1]] == 'D') {
 				return hedge[2];
 			}
@@ -64,7 +64,7 @@ public class Main_3055_Å»Ãâ_Á¶ÅÂ±Ô {
 				cnt = hedge[2];
 			}
 				
-			// °í½¿µµÄ¡ Å½»ö
+			// ï¿½ï¿½ï¿½ï¿½Ä¡ Å½ï¿½ï¿½
 			int nx, ny;
 			for (int i = 0; i < 4; i++) {
 				nx = hedge[0] + dx[i];
@@ -84,17 +84,17 @@ public class Main_3055_Å»Ãâ_Á¶ÅÂ±Ô {
 
 	public static void moveWater() {
 		Queue<int[]> waterQ = null;
-		// ¹°ÀÌ ´ã±ä Å¥ ¼±¾ð
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Å¥ ï¿½ï¿½ï¿½ï¿½
 		waterQ = new LinkedList<int[]>();
-		// ¹°ÀÌ ´ã±ä ¸®½ºÆ®·Î Å½»ö
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Å½ï¿½ï¿½
 		for (int i = 0; i < waterList.size(); i++) {
 			int[] water = waterList.get(i);
 			waterQ.add(water);
 		}
 
-		// ¹° ¸®½ºÆ® ÃÊ±âÈ­
+		// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ê±ï¿½È­
 		waterList = new ArrayList<int[]>();
-		// ¹° »ç¹æ ÆÛÁö±â
+		// ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		while (!waterQ.isEmpty()) {
 			int[] water = waterQ.poll();
 
@@ -109,7 +109,7 @@ public class Main_3055_Å»Ãâ_Á¶ÅÂ±Ô {
 					continue;
 
 				visited[waterX][waterY] = true;
-				// water ÁÂÇ¥ ¼±¾ð
+				// water ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½
 				waterList.add(new int[] { waterX, waterY });
 			}
 		}
