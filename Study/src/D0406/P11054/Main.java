@@ -1,4 +1,4 @@
-package D0404.P11054;
+package D0406.P11054;
 
 import java.io.*;
 import java.util.*;
@@ -18,7 +18,7 @@ public class Main {
 		int[] leftLis = new int[N];
 		int[] rightLis = new int[N];
 
-		// 왼쪽의 경우
+		// ?��쪽의 경우
 		for (int i = 0; i < N; i++) {
 			leftLis[i] = 1;
 			for (int j = 0; j <= i - 1; j++) {
@@ -26,7 +26,7 @@ public class Main {
 					leftLis[i] = leftLis[j] + 1;
 			}
 		}
-		// 오른쪽의 경우
+		// ?��른쪽?�� 경우
 		for (int i = N - 1; i >= 0; i--) {
 			rightLis[i] = 1;
 			for (int j = N - 1; j >= i; j--) {
@@ -34,17 +34,17 @@ public class Main {
 					rightLis[i] = rightLis[j] + 1;
 			}
 		}
-		// 전체 최대
+		// ?���? 최�?
 		int max = 0;
-		// 왼쪽 최대
+		// ?���? 최�?
 		int leftMax = 0;
 		for (int i = 0; i < N; i++) {
 			leftMax = Math.max(leftMax, leftLis[i]);
 			int rightMax = 0;
-			// 오른쪽 최대
+			// ?��른쪽 최�?
 			for (int j = N - 1; j >= i; j--) {
 				rightMax = Math.max(rightMax, rightLis[j]);
-				// 합계가 최대 인것을 구하라
+				// ?��계�? 최�? ?��것을 구하?��
 				max = Math.max(max, leftMax + rightMax - 1);
 			}
 		}

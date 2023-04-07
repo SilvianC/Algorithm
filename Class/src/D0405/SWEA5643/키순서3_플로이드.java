@@ -16,7 +16,7 @@ public class 키순서3_플로이드 {
 			N = Integer.parseInt(br.readLine());
 			M = Integer.parseInt(br.readLine());
 
-			adj = new int[N + 1][N + 1]; // �ڽź��� ū ���� ǥ��
+			adj = new int[N + 1][N + 1]; // 占쌘신븝옙占쏙옙 큰 占쏙옙占쏙옙 표占쏙옙
 
 			StringTokenizer st = null;
 			int smallP, tallP;
@@ -25,17 +25,17 @@ public class 키순서3_플로이드 {
 				smallP = Integer.parseInt(st.nextToken());
 				tallP = Integer.parseInt(st.nextToken());
 
-				adj[smallP][tallP] = 1; // ���� �׷���
+				adj[smallP][tallP] = 1; // 占쏙옙占쏙옙 占쌓뤄옙占쏙옙
 			}
-			// ���� �л�
+			// 占쏙옙占쏙옙 占싻삼옙
 			for (int k = 1; k <= N; k++) {
-				// ��� �л�
+				// 占쏙옙占� 占싻삼옙
 				for (int i = 1; i <= N; i++) {
 					if (i == k || adj[i][k] == 0)
 						continue;
-					// ���� �л�
+					// 占쏙옙占쏙옙 占싻삼옙
 					for (int j = 1; j <= N; j++) {
-						// �̹� Ű ������ �˰� ������ pass
+						// 占싱뱄옙 키 占쏙옙占쏙옙占쏙옙 占싯곤옙 占쏙옙占쏙옙占쏙옙 pass
 						if (adj[i][j] == 1)
 							continue;
 						adj[i][j] = adj[i][k] & adj[k][j];

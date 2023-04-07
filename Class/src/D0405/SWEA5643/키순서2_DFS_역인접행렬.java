@@ -16,7 +16,7 @@ public class 키순서2_DFS_역인접행렬 {
 			N = Integer.parseInt(br.readLine());
 			M = Integer.parseInt(br.readLine());
 
-			adj = new int[N + 1][N + 1]; // �ڽź��� ū ���� ǥ��
+			adj = new int[N + 1][N + 1]; // 占쌘신븝옙占쏙옙 큰 占쏙옙占쏙옙 표占쏙옙
 			radj = new int[N + 1][N + 1];
 
 			StringTokenizer st = null;
@@ -26,7 +26,7 @@ public class 키순서2_DFS_역인접행렬 {
 				smallP = Integer.parseInt(st.nextToken());
 				tallP = Integer.parseInt(st.nextToken());
 
-				radj[tallP][smallP] = adj[smallP][tallP] = 1; // ���� �׷���
+				radj[tallP][smallP] = adj[smallP][tallP] = 1; // 占쏙옙占쏙옙 占쌓뤄옙占쏙옙
 			}
 
 			for (int i = 1; i <= N; i++) {
@@ -42,8 +42,8 @@ public class 키순서2_DFS_역인접행렬 {
 	}
 
 	private static void dfs(int cur, int[][] adj, boolean[] visited) {
-		// adj : �ڽź��� ū ���� ��������̸� �ڽź��� ū ���� Ž��
-		// radj : �ڽź��� ���� ���� ��������̸� �ڽź��� ���� ���� Ž��
+		// adj : 占쌘신븝옙占쏙옙 큰 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙見占� 占쌘신븝옙占쏙옙 큰 占쏙옙占쏙옙 탐占쏙옙
+		// radj : 占쌘신븝옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙見占� 占쌘신븝옙占쏙옙 占쏙옙占쏙옙 占쏙옙占쏙옙 탐占쏙옙
 		visited[cur] = true;
 		for (int i = 1; i <= N; i++) {
 			if (adj[cur][i] == 1 && !visited[i]) {
