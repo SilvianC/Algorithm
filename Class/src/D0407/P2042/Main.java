@@ -48,7 +48,7 @@ public class Main {
 		bw.close();
 	}
 
-	// ±¸°£ ÇÕ ±¸ÇÏ±â
+	// êµ¬ê°„ í•© êµ¬í•˜ê¸°
 	private static long sum(int idx) {
 		long sum = 0;
 		while (0 < idx) {
@@ -59,7 +59,7 @@ public class Main {
 
 	}
 
-	// 2ÀÇ Á¦°ö¼öÀÇ tree ÀÎµ¦½º °ª »ý¼º
+	// 2ì˜ ì œê³± ìˆ˜ ë§Œí¼ì˜ êµ¬ê°„ í•© êµ¬í•˜ê¸°
 	private static void update(int i, long num) {
 		while (i <= N) {
 			tree[i] += num;

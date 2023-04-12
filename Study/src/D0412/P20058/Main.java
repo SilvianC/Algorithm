@@ -46,12 +46,9 @@ public class Main {
 		int size = (int) Math.pow(2, n);
 		int[][] temp = new int[len][len];
 
-		// 구간 나누기
 		for (int i = 0; i < N; i += size) {
 			for (int j = 0; j < N; j += size) {
-				// 90도 회전
 				while (size > 1) {
-					// 배열 돌리기
 
 					for (int x = i; x < i + size; x++) {
 						for (int y = i; y < j + size; y++) {

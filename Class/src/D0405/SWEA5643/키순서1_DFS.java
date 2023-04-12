@@ -3,7 +3,7 @@ package D0405.SWEA5643;
 import java.io.*;
 import java.util.*;
 
-public class Å°¼ø¼­1_DFS {
+public class í‚¤ìˆœì„œ1_DFS {
 
 	static int N, M, cnt, ans;
 	static int adj[][];

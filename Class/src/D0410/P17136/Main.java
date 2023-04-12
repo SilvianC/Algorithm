@@ -29,11 +29,11 @@ public class Main {
 
 	private static void dfs(int cnt, int[][] board) {
 
-		// °¡ÁöÄ¡±â
+		// ê°€ì§€ì¹˜ê¸°
 		if (cnt >= ans) {
 			return;
 		}
-		// ¿Ï·á µµ´Ş
+		// ì™„ë£Œ ë„ë‹¬
 		if (isFinished(board)) {
 			ans = Math.min(ans, cnt);
 			return;
@@ -41,7 +41,7 @@ public class Main {
 
 		for (int i = 0; i < MAX_LEN; i++) {
 			for (int j = 0; j < MAX_LEN; j++) {
-				// 1À» ¹ß°ß
+				// 1ì„ ë°œê²¬
 				if (board[i][j] == 1) {
 					for (int len = 5; len >= 1; len--) {
 						if (maxPaper[len] > 0) {
@@ -87,15 +87,6 @@ public class Main {
 		return true;
 	}
 
-	private static void copyBoard(int[][] board, int[][] boardCopy) {
-		for (int i = 0; i < MAX_LEN; i++) {
-			for (int j = 0; j < MAX_LEN; j++) {
-				boardCopy[i][j] = board[i][j];
-			}
-		}
-		return;
-	}
-
 	private static boolean isAvailable(int x, int y, int len, int[][] board) {
 		for (int i = x; i < x + len; i++) {
 			for (int j = y; j < y + len; j++) {
@@ -107,7 +98,6 @@ public class Main {
 				}
 			}
 		}
-
 		return true;
 	}
 

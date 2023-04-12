@@ -26,10 +26,10 @@ public class Main {
 	}
 
 	private static int getMax() {
-		// 0:¿ÞÂÊ, 1:¿À¸¥ÂÊ, 2:¾Æ·¡
+		// 0:ì™¼ìª½, 1:ì˜¤ë¥¸ìª½, 2:ì•„ëž˜
 		int[][][] dp = new int[N][M][3];
 
-		// Ã¹ÁÙ
+		// ì²«ì¤„
 		for (int j = 0; j < M; j++) {
 			dp[0][j][1] = map[0][j];
 			if (j > 0) {
@@ -39,7 +39,7 @@ public class Main {
 		}
 
 		if (N > 2) {
-			// Áß°£ ÁÙ
+			// ì¤‘ê°„ ì¤„
 			for (int i = 1; i < N - 1; i++) {
 				for (int j = 0; j < M; j++) {
 					dp[i][j][1] = map[i][j];
@@ -66,7 +66,7 @@ public class Main {
 		}
 
 		if (N > 1) {
-			// ¸·ÁÙ
+			// ë§‰ì¤„
 			for (int j = 0; j < M; j++) {
 				dp[N - 1][j][1] = map[N - 1][j];
 				if (j > 0) {
