@@ -38,9 +38,7 @@ public class Main {
 				if (idx < 0)
 					continue;
 
-				}
 			}
 		}
 	}
-
 }

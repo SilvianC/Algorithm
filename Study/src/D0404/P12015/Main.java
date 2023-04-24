@@ -25,21 +25,21 @@ public class Main {
 			}
 
 			int low = 0, mid = 0, high = len - 1;
-			// ì¼ì¹˜í•˜ëŠ” ê²ƒì„ ì°¾ì„ ë•Œ
+			// ÀÏÄ¡ÇÏ´Â °ÍÀ» Ã£À» ¶§
 			int flag = mid;
 			while (low <= high) {
 				mid = (low + high) / 2;
 
-				// í´ ê²½ìš°
+				// Å¬ °æ¿ì
 				if (dp[mid] < arr[i]) {
 					low = mid + 1;
 				}
-				// ì‘ì€ ê²½ìš°
+				// ÀÛÀº °æ¿ì
 				else if (dp[mid] > arr[i]) {
 					high = mid - 1;
 					flag = mid;
 				}
-				// ë™ì¼í•œ ê²½ìš°
+				// µ¿ÀÏÇÑ °æ¿ì
 				else {
 					flag = mid;
 					break;

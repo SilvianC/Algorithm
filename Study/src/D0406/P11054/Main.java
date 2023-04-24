@@ -18,7 +18,7 @@ public class Main {
 		int[] leftLis = new int[N];
 		int[] rightLis = new int[N];
 
-		// ì™¼ìª½ì˜ ê²½ìš°
+		// ¿ŞÂÊÀÇ °æ¿ì
 		for (int i = 0; i < N; i++) {
 			leftLis[i] = 1;
 			for (int j = 0; j <= i - 1; j++) {
@@ -26,7 +26,7 @@ public class Main {
 					leftLis[i] = leftLis[j] + 1;
 			}
 		}
-		// ì˜¤ë¥¸ìª½ì˜ ê²½ìš°
+		// ¿À¸¥ÂÊÀÇ °æ¿ì
 		for (int i = N - 1; i >= 0; i--) {
 			rightLis[i] = 1;
 			for (int j = N - 1; j >= i; j--) {
@@ -34,17 +34,17 @@ public class Main {
 					rightLis[i] = rightLis[j] + 1;
 			}
 		}
-		// ì „ì²´ ìµœëŒ€
+		// ÀüÃ¼ ÃÖ´ë
 		int max = 0;
-		// ì™¼ìª½ ìµœëŒ€
+		// ¿ŞÂÊ ÃÖ´ë
 		int leftMax = 0;
 		for (int i = 0; i < N; i++) {
 			leftMax = Math.max(leftMax, leftLis[i]);
 			int rightMax = 0;
-			// ì˜¤ë¥¸ìª½ ìµœëŒ€
+			// ¿À¸¥ÂÊ ÃÖ´ë
 			for (int j = N - 1; j >= i; j--) {
 				rightMax = Math.max(rightMax, rightLis[j]);
-				// í•©ê³„ê°€ ìµœëŒ€ ì¸ê²ƒì„ êµ¬í•˜ë¼
+				// ÇÕ°è°¡ ÃÖ´ë ÀÎ°ÍÀ» ±¸ÇÏ¶ó
 				max = Math.max(max, leftMax + rightMax - 1);
 			}
 		}
